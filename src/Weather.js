@@ -5,11 +5,12 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/rain.png",
       humidity: response.data.main.humidity,
       date: "Wednesday 07:00",
       wind: response.data.wind.speed,

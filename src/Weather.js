@@ -61,6 +61,16 @@ export default function Weather(props) {
         </form>
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coordinates} />
+        <footer>
+          This project was coded by Monique D. and is{" "}
+          <a
+            href="https://github.com/MoniqueDaw/weather-react-two"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open-sourced on GitHub
+          </a>
+        </footer>
       </div>
     );
   } else {
